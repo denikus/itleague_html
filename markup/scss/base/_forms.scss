@@ -1,0 +1,94 @@
+// forms
+
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+select,
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    vertical-align: middle;
+    background: #fff;
+    border: 1px solid $separator-color;
+    margin: 0;
+    color: $base-text-color;
+    border: none;
+    border-radius: $border-radius-base;
+    font: 14px/28px $base-font-sans-serif;
+    padding: 10px 15px;
+    max-width: 100%;
+    outline: none;
+    height: 48px;
+    &:focus {
+        box-shadow: 0 0 2px 0 $base-link-color;
+    }
+    @include placeholder {
+        color: $placeholder-color;
+    }
+}
+select {
+    overflow: visible;
+    option {
+        padding: 2px 5px;
+        outline: none;
+    }
+}
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+    -webkit-appearance: none;
+}
+textarea {
+    resize: vertical;
+    min-height: 48px;
+    max-height: 500px;
+    height: 150px;
+    overflow: auto;
+}
+label{vertical-align:middle;}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding:0;
+    border:0;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    font-family: $base-font-sans-serif;
+    @extend %transition;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    padding: 13px 20px;
+    border-radius: $border-radius-base;
+    background: $base-link-color;
+    border: 2px solid $base-link-color;
+    position: relative;
+    &:hover {
+        text-decoration: none;
+        color: $base-link-color;
+        background: #fff;
+    }
+}
+
