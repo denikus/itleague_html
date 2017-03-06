@@ -5,10 +5,10 @@
 $gray-dark: #424f61;
 $gray: #576981;
 $gray-secondary: #8596ae;
+$gray-light: #f7f8fb;
 $black: #333;
 $white: #fff;
 $blue: #5a8efb;
-$light-gray: #f7f8fb;
 $separator-color: #ecedf0;
 $green: #4bc88b;
 $blue-light: #9db3d1;
@@ -22,7 +22,7 @@ $base-font: $base-font-sans-serif;
 
 // Body
 $base-text-color: $gray;
-$base-background-color: $light-gray;
+$base-background-color: $gray-light;
 $font-size-base: 16px;
 $line-height-base: 1.5;
 $base-font-family: $base-font-sans-serif;

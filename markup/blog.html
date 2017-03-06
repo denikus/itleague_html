@@ -9,24 +9,23 @@
 <body>
 	<div id="wrapper">
 		<header id="header">
-			<div class="container header-ds" id="header-ds">
+			<div id="header-ds" class="container header-ds">
 				<nav id="nav">
 					<strong class="logo">
 						<a href="#"><img src="images/logo.png" alt="IT LEAGUE"></a>
 					</strong>
 					<ul class="nav">
-						<li><a href="#">Новости</a></li>
-						<li><a href="#">Календарь</a></li>
-						<li><a href="#">Таблица</a></li>
-						<li><a href="#">Бомбардиры</a></li>
-						<li><a href="#">Фото</a></li>
-						<li><a href="#">Видео</a></li>
+						<li class="hidden-m"><a href="#">Новости</a></li>
+						<li class="hidden-m"><a href="#">Календарь</a></li>
+						<li class="hidden-m"><a href="#">результаты</a></li>
+						<li class="hidden-m"><a href="#">Команды</a></li>
+						<li><a href="#">Медиа</a></li>
 						<li><a href="#">IT-Прогноз</a></li>
 					</ul>
 				</nav>
 				<ul class="login-nav">
-					<li><a href="#">Регистрация</a></li>
-					<li><a href="#">Вход</a></li>
+					<li><a href="#"><i class="icon-search"></i> Поиск</a></li>
+					<li><a href="#"><i class="icon-user"></i> Вход</a></li>
 				</ul>
 			</div>
 			<div class="header-mb">
@@ -36,13 +35,19 @@
 				<strong class="logo">
 					<a href="#"><img src="images/logo.png" alt="IT LEAGUE"></a>
 				</strong>
+				<ul class="nav">
+					<li><a href="#">Новости</a></li>
+					<li><a href="#">Календарь</a></li>
+					<li><a href="#">результаты</a></li>
+					<li><a href="#">Команды</a></li>
+				</ul>
 			</div>
 		</header>
 		<main role="main" id="main">
 			<div class="container">
 				<div class="two-columns">
 					<div id="content">
-						<article class="main-news box post" style="background-image: url(images/img1.jpg);">
+						<article class="main-news content-box post" style="background-image: url(images/img1.jpg);">
 							<h2 class="title">Выделенная Новость</h2>
 							<div class="text-box">
 								<h3><a href="#">Отчет о финалах</a></h3>
@@ -56,7 +61,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="box post">
+						<article class="content-box post">
 							<div class="text-box">
 								<h2 class="title">Категория</h2>
 								<h3><a href="#">Отчет о финалах</a></h3>
@@ -70,7 +75,7 @@
 								</div>
 							</div>
 						</article>
-						<article class="box box-img post">
+						<article class="content-box box-img post">
 							<div class="media-holder" style="background-image: url(images/img2.jpg);"></div>
 							<div class="text-box">
 								<h2 class="title">Категория</h2>
@@ -87,7 +92,7 @@
 						</article>
 					</div>
 					<aside id="sidebar">
-						<div class="box widget">
+						<div class="content-box widget">
 							<h3>Категориит</h3>
 							<ul class="list">
 								<li>Вдоварейзе Сергей</li>
@@ -96,7 +101,7 @@
 								<li>Вольгуст Максим</li>
 							</ul>
 						</div>
-						<div class="box widget">
+						<div class="content-box widget">
 							<h3>Последние комментарии</h3>
 							<ul class="list">
 								<li>Вдоварейзе Сергей</li>
@@ -105,7 +110,7 @@
 								<li>Вольгуст Максим</li>
 							</ul>
 						</div>
-						<div class="box search-box">
+						<div class="content-box search-box">
 							<form action="#">
 								<input type="search" name="" id="" placeholder="Поиск" class="search-input">
 								<button type="submit" class="search-button"><span class="icon-search"></span></button>

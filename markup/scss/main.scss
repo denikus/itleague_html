@@ -32,6 +32,12 @@ $media-expressions: (
 @import 'base/typography';
 @import 'base/forms';
 
+.hidden-m {
+	@include media('<tablet') {
+		display: none !important;
+	}
+}
+
 #wrapper {
 	position: relative;
 	overflow: hidden;
@@ -61,11 +67,11 @@ $media-expressions: (
 #footer,
 #main {
 	@include media('<tablet') {
-		transition: left 0.5s ease-in-out;
-		left: 0;
+		transition: right 0.5s ease-in-out;
+		right: 0;
 		position: relative;
 		.menu-open & {
-			left: 250px;
+			right: 250px;
 		}
 	}
 }
@@ -83,11 +89,11 @@ $media-expressions: (
 	/* fix for iphone6+  landscape */
 	#wrapper #header {
 		position: static;
-		transition: margin-left 0.5s ease-in-out;
-		margin-left: 0;
+		transition: margin-right 0.5s ease-in-out;
+		margin-right: 0;
 		width: 100%;
 		.menu-open & {
-			margin-left: 250px;
+			margin-right: 250px;
 			.menu-opener {
 				z-index: 102;
 			}
@@ -116,12 +122,12 @@ $media-expressions: (
 	color: #fff;
 	padding: 32px 0;
 	margin: 0 0 30px;
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
 	a {
 		color: inherit;
-	}
-	@include media('>=tablet','<desktop') {
-		font-size: 13px;
-		line-height: 24px;
 	}
 	@include media('<tablet') {
 		padding: 15px;
@@ -134,7 +140,7 @@ $media-expressions: (
 		margin: 0 40px;
 	}
 	.menu-opener {
-		float: left;
+		float: right;
 		height: 24px;
 		width: 30px;
 		position: relative;
@@ -148,6 +154,7 @@ $media-expressions: (
 			border-radius: 2px;
 			background: #fff;
 			@extend %transition;
+			transition-delay: 0.5s;
 			top: 50%;
 			left: 3px;
 			margin-top: -1px;
@@ -162,6 +169,7 @@ $media-expressions: (
 				top: -6px;
 				left: 0;
 				@extend %transition;
+				transition-delay: 0.5s;
 			}
 			&:after {
 				top: 6px;
@@ -185,8 +193,26 @@ $media-expressions: (
 	@include media('>=tablet') {
 		display: none;
 	}
-	@include media('<tablet') {
-
+	.nav {
+		@extend %listreset;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		clear: both;
+		margin: 15px -15px -15px;
+		border-top: 1px solid rgba(#fff,.5);
+		li {
+			flex: 1 100%;
+		}
+		a {
+			display: block;
+			padding: 10px 5px;
+		}
+		@include media('<374px') {
+			font-size: 11px;
+		}
 	}
 }
 .header-ds {
@@ -203,14 +229,14 @@ $media-expressions: (
 		position: fixed;
 		top: 0;
 		bottom: 0;
-		left: -250px;
+		right: -250px;
 		width: 250px;
 		display: block;
 		background: #232c39;
 		color: #fff;
 		z-index: 102;
 		padding: 10px 0;
-		transition: left 0.5s ease-in-out;
+		transition: right 0.5s ease-in-out;
 		overflow: auto;
 		li {
 			border-top: 1px solid rgba(#fff,.5);
@@ -228,7 +254,7 @@ $media-expressions: (
 			}
 		}
 		.menu-open & {
-			left: 0;
+			right: 0;
 		}
 	}
 }
@@ -281,6 +307,13 @@ $media-expressions: (
 			}
 		}
 	}
+	a {
+		@extend %transition;
+		&:hover {
+			text-decoration: none;
+			opacity: 0.6;
+		}
+	}
 }
 .login-nav {
 	@extend %listreset;
@@ -293,12 +326,23 @@ $media-expressions: (
 		li {
 			white-space: nowrap;
 			& + li {
-				margin-left: 5px;
-				&:before {
-					content: '|';
-					margin-right: 5px;
-				}
+				margin-left: 25px;
 			}
+		}
+	}
+	i[class*=icon] {
+		margin-right: 5px;
+	}
+	a {
+		@extend %transition;
+		&:hover {
+			text-decoration: none;
+			opacity: 0.6;
+		}
+	}
+	@include media('>=tablet','<desktop') {
+		li + li {
+			margin-left: 10px;
 		}
 	}
 }
@@ -376,14 +420,14 @@ $media-expressions: (
 		}
 	}
 }
-.row{
+.content-row{
 	margin: 30px -15px;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	.box {
+	.content-box {
 		margin: 0 15px;
 		flex-basis: calc(33.33% - 30px);
 		&.big {
@@ -395,16 +439,16 @@ $media-expressions: (
 	}
 	@include media('<desktop') {
 		display: block;
-		.box {
+		.content-box {
 			margin-bottom: 30px;
 		}
 	}
 }
 .news-section{
-	.box {
+	.content-box {
 		flex-basis: calc(50% - 30px);
 	}
-	.other-news {
+	.content-box.other-news {
 		.news-box {
 			& + .news-box {
 				padding-top: 1em;
@@ -414,14 +458,15 @@ $media-expressions: (
 		h3 {
 			text-transform: none;
 			margin-bottom: 0;
+			line-height: 1.2;
 		}
 	}
 }
 .home-content {
-	.box {	
+	.content-box {	
 		h3 {
-			line-height: 30px;
-			margin-bottom: .5em;
+			line-height: 1.667;
+			margin-bottom: .25em;
 			text-transform: uppercase;
 		}
 		&.box-img {
@@ -432,7 +477,7 @@ $media-expressions: (
 		}
 	}
 	@include media('>=phone') {
-		.box {	
+		.content-box {	
 			> .text-box {
 				position: relative;
 				padding-bottom: 80px;
@@ -452,7 +497,7 @@ $media-expressions: (
 		}
 	}
 }
-.box {
+.content-box {
 	margin-bottom: 30px;
 	border-radius: $border-radius-base;
 	background: $white;
@@ -467,7 +512,7 @@ $media-expressions: (
 		font-size: 14px;
 		line-height: 18px;
 		text-transform: uppercase;
-		margin-bottom: 1em;
+		margin-bottom: .5em;
 		font-weight: normal;
 	}
 	h3 {
@@ -536,7 +581,17 @@ $media-expressions: (
 		color: #c7cfd9;
 		.tabset {
 			color: #fff;
-			border-bottom-color: #6c788f;
+			border-color: #333f50;
+			background: #384455;
+			a {
+				&:before {
+					background: $green;
+				}
+				&.active,
+				&:hover {
+					color: $green;
+				}
+			}
 		}
 		.players-list {
 			.count {
@@ -549,12 +604,11 @@ $media-expressions: (
 				border-top-color: #505d70;
 			}
 		}
-	}
-	&.transparent {
-		background: none;
-		padding-top: 0;
-		padding-bottom: 0;
-		box-shadow: none;
+		&.widget {
+			h3 {
+				background: inherit;
+			}
+		}
 	}
 	&.main-news {
 		background-position: 50% 50%;
@@ -598,13 +652,21 @@ $media-expressions: (
 		min-height: 0;
 		h3 {
 			text-transform: uppercase;
-			color: #fff;
-			background: $gray-dark;
+			//color: $gray-dark;
+			background: $gray-light;
+			font-weight: normal;
 			margin: 0 -30px 10px;
 			font-size: 13px;
 			line-height: 18px;
 			padding: 17px 30px;
 			border-radius: $border-radius-base $border-radius-base 0 0;
+			+ .tabset {
+				margin-top: -10px;
+			}
+			.statistics & {
+				background: $gray-dark;
+				color: #fff;
+			}
 		}
 		&.transparent {
 			h3 {
@@ -614,6 +676,17 @@ $media-expressions: (
 				margin: 0;
 			}
 		}
+		.tabset {
+			margin-left: -30px;
+			margin-right: -30px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+	&.transparent {
+		background: none;
+		padding: 0;
+		box-shadow: none;
 	}
 	&.other-players {
 		padding-top: 0;
@@ -752,6 +825,12 @@ $media-expressions: (
 				padding-left: 20px;
 				padding-right: 20px;
 			}
+			.tabset {
+				margin-left: -20px;
+				margin-right: -20px;
+				padding-left: 20px;
+				padding-right: 20px;
+			}
 		}
 	}
 	@include media('>=phone') {
@@ -799,10 +878,11 @@ $media-expressions: (
 
 .tabset {
 	@extend %listreset;
-	border-bottom: 1px solid $separator-color;
-	font-size: 13px;
+	border: 1px solid $separator-color;
+	border-width: 1px 0;
+	font-size: 11px;
 	line-height: 16px;
-	font-weight: bold;
+	text-transform: uppercase;
 	color: $gray-dark;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -811,27 +891,28 @@ $media-expressions: (
 	display: flex;
 	li {
 		+ li {
-			margin-left: 26px;
+			margin-left: 20px;
 		}
 	}
 	a {
 		display: block;
 		position: relative;
 		color: inherit;
-		padding-bottom: 10px;
+		padding: 6px 0;
 		&:before {
 			content: '';
 			position: absolute;
 			bottom: -1px;
 			width: 0;
 			right: 0;
-			background: $green;
+			background: $blue;
 			height: 2px;
 			@extend %transition;
 		}
 		&.active,
 		&:hover {
 			text-decoration: none;
+			color: $blue;
 			&:before {
 				width: 100%;
 				left: 0;
@@ -885,13 +966,27 @@ $media-expressions: (
 		&:first-child {
 			text-align: right;
 		}
+		&.win {
+			color: $green;
+		}
+	}
+	.date {
+		text-align: center;
+		color: #909eb1;
+		text-transform: uppercase;
+		font-size: 11px;
+		margin-bottom: 10px;
+		display: block;
 	}
 	.score {
-		flex: 1 0 55px;
+		flex: 1 0 45px;
 		text-align: center;
-		padding: 0 5px;
+		padding: 0 3px;
 		font-weight: bold;
 		white-space: nowrap;
+		margin: 0 5px;
+		background: $gray-light;
+		border-radius: 2px;
 	}
 	a {
 		display: inline-block;
@@ -899,8 +994,17 @@ $media-expressions: (
 		max-width: 100%;
 	}
 	li {
+		display: block;
+	}
+	.match-holder {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
 		align-items: center;
 		justify-content: center;
+		line-height: 23px;
 	}
 	#sidebar & {
 		@include media('>=tablet', '<=desktop') {
@@ -911,36 +1015,171 @@ $media-expressions: (
 	}
 }
 
-.results-table {
-	td, th {
-		&:first-child {
-			& + td,
-			& + th {
-				text-align: left;
+.main-title {
+	background: #fff;
+	margin-bottom: 30px;
+	padding: 25px 0;
+	h1 {
+		font-size: 20px;
+		line-height: 24px;
+		margin: 0;
+	}
+	&:first-child {
+		margin-top: -30px;
+	}
+}
+
+.statistics {
+	margin-bottom: 30px;
+	table {
+		td, th {
+			&:first-child {
+				& + td,
+				& + th {
+					text-align: left;
+				}
+			}
+			&:last-child {
+				padding-right: 0;
+				text-align: right;
 			}
 		}
-		&:last-child {
-			padding-right: 0;
-			text-align: right;
+		.up,
+		.down {
+			position: relative;
+			&:before {
+				font: 10px/16px icomoon;
+				position: absolute;
+				left: -15px;
+				color: $green;
+				top: 50%;
+				margin-top: -9px;
+				content: '\ea32';
+			}
+		}
+		.down {
+			&:before {
+				content: '\ea36';
+				color: $red;
+			}
+		}
+		.green,
+		.yellow,
+		.red {
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				top: -1px;
+				bottom: -1px;
+				left: -30px;
+				width: 2px;
+				background: $green;
+			}
+		}
+		.yellow:after {
+			background: #f5e452;
+		}
+		.red:after {
+			background: #ed3c3c;
+		}
+		.team {
+			font-size: 12px;
+			white-space: nowrap;
+			color: #909eb1;
 		}
 	}
-	.up,
-	.down {
-		position: relative;
-		&:before {
-			font: 10px/16px icomoon;
-			position: absolute;
-			left: -15px;
-			color: $green;
-			top: 50%;
-			margin-top: -9px;
-			content: '\ea32';
+	.content-box {
+		margin-bottom: 10px;
+	}
+	.link {
+		display: block;
+		text-align: right;
+		padding-right: 30px;
+		font-size: 11px;
+		text-transform: uppercase;
+		color: #909eb1;
+		a {
+			color: inherit;
 		}
 	}
-	.down {
-		&:before {
-			content: '\ea36';
-			color: $red;
+	@include media('<widescreen') {
+		table {
+			.green,
+			.yellow,
+			.red {
+				&:after {
+					left: -20px;
+				}
+			}
+		}
+	}
+}
+
+.statistics-filters {
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 20px;
+	.holder {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: flex-start;
+	}
+	.label {
+		margin-right: 10px;
+	}
+	.leagues {
+		@extend %listreset;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		border-radius: 2px;
+		background: #fff;
+		box-shadow: 0 0 6px 2px rgba(#232c39, .04);
+		a {
+			display: block;
+			color: $gray-dark;
+			border-radius: 2px;
+			padding: 0 20px;
+			@extend %transition;
+		}
+		.active a,
+		a:hover {
+			text-decoration: none;
+			color: #fff;
+			background: $green;
+		}
+	}
+	select {
+		font-size: 14px;
+		line-height: 24px;
+		height: 24px;
+		padding: 0 15px;
+		color: $gray-dark;
+		box-shadow: 0 0 6px 2px rgba(#232c39, .04);
+	}
+	@include media('>=tablet') {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		.holder {
+			margin-right: 40px;
+		}
+	}
+	@include media('<tablet') {
+		.holder {
+			margin-bottom: 20px;
+		}
+		.label {
+			width: 50px;
+			flex: 0 0 50px;
 		}
 	}
 }

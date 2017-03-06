@@ -15,18 +15,17 @@
 						<a href="#"><img src="images/logo.png" alt="IT LEAGUE"></a>
 					</strong>
 					<ul class="nav">
-						<li><a href="#">Новости</a></li>
-						<li><a href="#">Календарь</a></li>
-						<li><a href="#">Таблица</a></li>
-						<li><a href="#">Бомбардиры</a></li>
-						<li><a href="#">Фото</a></li>
-						<li><a href="#">Видео</a></li>
+						<li class="hidden-m"><a href="#">Новости</a></li>
+						<li class="hidden-m"><a href="#">Календарь</a></li>
+						<li class="hidden-m"><a href="#">результаты</a></li>
+						<li class="hidden-m"><a href="#">Команды</a></li>
+						<li><a href="#">Медиа</a></li>
 						<li><a href="#">IT-Прогноз</a></li>
 					</ul>
 				</nav>
 				<ul class="login-nav">
-					<li><a href="#">Регистрация</a></li>
-					<li><a href="#">Вход</a></li>
+					<li><a href="#"><i class="icon-search"></i> Поиск</a></li>
+					<li><a href="#"><i class="icon-user"></i> Вход</a></li>
 				</ul>
 			</div>
 			<div class="header-mb">
@@ -36,20 +35,26 @@
 				<strong class="logo">
 					<a href="#"><img src="images/logo.png" alt="IT LEAGUE"></a>
 				</strong>
+				<ul class="nav">
+					<li><a href="#">Новости</a></li>
+					<li><a href="#">Календарь</a></li>
+					<li><a href="#">результаты</a></li>
+					<li><a href="#">Команды</a></li>
+				</ul>
 			</div>
 		</header>
 		<main role="main" id="main">
 			<div class="container">
 				<div class="two-columns home-content">
 					<div id="content">
-						<section class="news-section row">
-							<article class="main-news box" style="background-image: url(images/img1.jpg);">
+						<section class="news-section content-row">
+							<article class="main-news content-box" style="background-image: url(images/img1.jpg);">
 								<div class="text-box">
 									<h2><a href="#">Отчет о финалах</a></h2>
 									<p>Полуфиналы порадовали невероятной интригой и борьбой до самого финального свистка. Однако, даже в матчах за места с 5 по 10 не было ни единого проходного результата - борьба, борьба и ещё раз борьба.</p>
 								</div>
 							</article>
-							<div class="other-news box">
+							<div class="other-news content-box">
 								<h2><a href="#">Новости</a></h2>
 								<article class="news-box">
 									<div class="text-box">
@@ -67,15 +72,15 @@
 							</div>
 						</section>
 						<section class="content-holder">
-							<div class="row">
-								<div class="box green" style="background-image: url(images/img4.jpg);">
+							<div class="content-row">
+								<div class="content-box green" style="background-image: url(images/img4.jpg);">
 									<div class="text-box">
 										<h2><a href="#">It-прогноз</a></h2>
 										<h3>Турнир прогнозистов и лучших ванг текущего розыгрыша</h3>
 										<a href="#" class="button button-more button-white">Результаты</a>
 									</div>
 								</div>
-								<div class="box big box-img">
+								<div class="content-box big box-img">
 									<div class="text-box">
 										<h2><a href="#">МедиА</a></h2>
 										<h3>Фотографии последних матчей и немного жаб Lorem Ipsum</h3>
@@ -86,8 +91,8 @@
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="box big box-img">
+							<div class="content-row">
+								<div class="content-box big box-img">
 									<div class="text-box">
 										<h2><a href="#">Видео</a></h2>
 										<h3>Видео всех матчей и клипы с овновными моментами</h3>
@@ -97,8 +102,8 @@
 										<a href="#" class="btn-play">Btn Play</a>
 									</div>
 								</div>
-								<div class="box dark">
-									<h2><a href="#">Лучшие Бомбардиры</a></h2>
+								<div class="content-box dark widget">
+									<h3><a href="#">Лучшие Бомбардиры</a></h3>
 									<ul class="tabset" data-directive="tabs">
 										<li><a data-behaviour="tab" href="#tab1" class="active">Senior</a></li>
 										<li><a data-behaviour="tab" href="#tab2">Middle</a></li>
@@ -159,7 +164,7 @@
 						</section>
 					</div>
 					<aside id="sidebar" >
-						<div class="box widget">
+						<div class="content-box widget">
 							<h3>Последние матчи</h3>
 							<ul class="tabset" data-directive="tabs">
 								<li><a  data-behaviour="tab" href="#tab1_1" class="active">Senior</a></li>
@@ -170,93 +175,138 @@
 								<div id="tab1_1">
 									<ul class="matches-list">
 										<li>
-											<span class="team"><a href="#">EPAM Systems</a></span>
-											<span class="score"><a href="#">4 : 5</a></span>
-											<span class="team"><a href="#">Cikum</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team"><a href="#">EPAM Systems</a></span>
+												<span class="score"><a href="#">4 : 5</a></span>
+												<span class="team win"><a href="#">Cikum</a></span>
+											</div>
 										</li>
 										<li>
-											<span class="team"><a href="#">NixSolutions</a></span>
-											<span class="score"><a href="#">4 : 5</a></span>
-											<span class="team"><a href="#">GraceHoppers</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team win"><a href="#">NixSolutions</a></span>
+												<span class="score"><a href="#">4 : 5</a></span>
+												<span class="team"><a href="#">GraceHoppers</a></span>
+											</div>
 										</li>
 										<li>
-											<span class="team"><a href="#">W3</a></span>
-											<span class="score"><a href="#">2 : 2</a></span>
-											<span class="team"><a href="#">SYTOSS</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team"><a href="#">W3</a></span>
+												<span class="score"><a href="#">2 : 2</a></span>
+												<span class="team"><a href="#">SYTOSS</a></span>
+											</div>
 										</li>
 										<li>
-											<span class="team"><a href="#">Art Lemon Studio</a></span>
-											<span class="score"><a href="#">4 : 5</a></span>
-											<span class="team"><a href="#">X1 Group</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team"><a href="#">Art Lemon Studio</a></span>
+												<span class="score"><a href="#">4 : 5</a></span>
+												<span class="team win"><a href="#">X1 Group</a></span>
+											</div>
 										</li>
 										<li>
-											<span class="team"><a href="#">NixSolutions</a></span>
-											<span class="score"><a href="#">4 : 5</a></span>
-											<span class="team"><a href="#">Plarium</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team"><a href="#">NixSolutions</a></span>
+												<span class="score"><a href="#">4 : 5</a></span>
+												<span class="team win"><a href="#">Plarium</a></span>
+											</div>
 										</li>
 									</ul>
 								</div>
 								<div id="tab2_1" style="display: none;">
 									<ul class="matches-list">
 										<li>
-											<span class="team"><a href="#">EPAM Systems</a></span>
-											<span class="score"><a href="#">4 : 5</a></span>
-											<span class="team"><a href="#">Cikum</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team"><a href="#">EPAM Systems</a></span>
+												<span class="score"><a href="#">4 : 5</a></span>
+												<span class="team win"><a href="#">Cikum</a></span>
+											</div>
 										</li>
 										<li>
-											<span class="team"><a href="#">NixSolutions</a></span>
-											<span class="score"><a href="#">4 : 5</a></span>
-											<span class="team"><a href="#">GraceHoppers</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team win"><a href="#">NixSolutions</a></span>
+												<span class="score"><a href="#">4 : 5</a></span>
+												<span class="team"><a href="#">GraceHoppers</a></span>
+											</div>
 										</li>
 										<li>
-											<span class="team"><a href="#">W3</a></span>
-											<span class="score"><a href="#">2 : 2</a></span>
-											<span class="team"><a href="#">SYTOSS</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team"><a href="#">W3</a></span>
+												<span class="score"><a href="#">2 : 2</a></span>
+												<span class="team"><a href="#">SYTOSS</a></span>
+											</div>
 										</li>
 										<li>
-											<span class="team"><a href="#">Art Lemon Studio</a></span>
-											<span class="score"><a href="#">4 : 5</a></span>
-											<span class="team"><a href="#">X1 Group</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team"><a href="#">Art Lemon Studio</a></span>
+												<span class="score"><a href="#">4 : 5</a></span>
+												<span class="team win"><a href="#">X1 Group</a></span>
+											</div>
 										</li>
 										<li>
-											<span class="team"><a href="#">NixSolutions</a></span>
-											<span class="score"><a href="#">4 : 5</a></span>
-											<span class="team"><a href="#">Plarium</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team"><a href="#">NixSolutions</a></span>
+												<span class="score"><a href="#">4 : 5</a></span>
+												<span class="team win"><a href="#">Plarium</a></span>
+											</div>
 										</li>
 									</ul>
 								</div>
 								<div id="tab3_1" style="display: none;">
 									<ul class="matches-list">
 										<li>
-											<span class="team"><a href="#">EPAM Systems</a></span>
-											<span class="score"><a href="#">4 : 5</a></span>
-											<span class="team"><a href="#">Cikum</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team"><a href="#">EPAM Systems</a></span>
+												<span class="score"><a href="#">4 : 5</a></span>
+												<span class="team win"><a href="#">Cikum</a></span>
+											</div>
 										</li>
 										<li>
-											<span class="team"><a href="#">NixSolutions</a></span>
-											<span class="score"><a href="#">4 : 5</a></span>
-											<span class="team"><a href="#">GraceHoppers</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team win"><a href="#">NixSolutions</a></span>
+												<span class="score"><a href="#">4 : 5</a></span>
+												<span class="team"><a href="#">GraceHoppers</a></span>
+											</div>
 										</li>
 										<li>
-											<span class="team"><a href="#">W3</a></span>
-											<span class="score"><a href="#">2 : 2</a></span>
-											<span class="team"><a href="#">SYTOSS</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team"><a href="#">W3</a></span>
+												<span class="score"><a href="#">2 : 2</a></span>
+												<span class="team"><a href="#">SYTOSS</a></span>
+											</div>
 										</li>
 										<li>
-											<span class="team"><a href="#">Art Lemon Studio</a></span>
-											<span class="score"><a href="#">4 : 5</a></span>
-											<span class="team"><a href="#">X1 Group</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team"><a href="#">Art Lemon Studio</a></span>
+												<span class="score"><a href="#">4 : 5</a></span>
+												<span class="team win"><a href="#">X1 Group</a></span>
+											</div>
 										</li>
 										<li>
-											<span class="team"><a href="#">NixSolutions</a></span>
-											<span class="score"><a href="#">4 : 5</a></span>
-											<span class="team"><a href="#">Plarium</a></span>
+											<time class="date">14:00, 3 Декабря 2016, суббота</time>
+											<div class="match-holder">
+												<span class="team"><a href="#">NixSolutions</a></span>
+												<span class="score"><a href="#">4 : 5</a></span>
+												<span class="team win"><a href="#">Plarium</a></span>
+											</div>
 										</li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="box widget">
+						<div class="content-box widget">
 							<h3>Последние матчи</h3>
 							<ul class="tabset" data-directive="tabs">
 								<li><a data-behaviour="tab" href="#tab1_2" class="active">Senior</a></li>
@@ -580,7 +630,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="box widget transparent">
+						<div class="content-box widget transparent">
 							<h3>Следующий тур пропускают</h3>
 							<ul class="players-list">
 								<li>
