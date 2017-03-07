@@ -50,13 +50,13 @@
 				</div>
 			</div>
 			<div class="container">
-				<div class="statistics-filters">
+				<div class="content-filters">
 					<div class="holder">
 						<span class="label">Лига:</span>
-						<ul class="leagues">
-							<li class="active"><a href="#">Senior</a></li>
-							<li><a href="#">Middle</a></li>
-							<li><a href="#">Junior</a></li>
+						<ul class="leagues" data-directive="tabs">
+							<li><a href="#senior" data-behaviour="tab" class="active">Senior</a></li>
+							<li><a href="#middle" data-behaviour="tab">Middle</a></li>
+							<li><a href="#junior" data-behaviour="tab">Junior</a></li>
 						</ul>
 					</div>
 					<div class="holder">
@@ -68,253 +68,751 @@
 						</select>
 					</div>
 				</div>
-				<div class="table-row">
-					<div class="table-holder statistics">
-						<div class="content-box widget">
-							<h3>Турнирная таблица</h3>
-							<table>
-								<thead>
-									<tr>
-										<th>#</th>
-										<th>Команда</th>
-										<th>И</th>
-										<th>В</th>
-										<th>Н</th>
-										<th>П</th>
-										<th>М</th>
-										<th>О</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="green down">1</td>
-										<td>Intetics</td>
-										<td>9</td>
-										<td>6</td>
-										<td>3</td>
-										<td>0</td>
-										<td>24-5</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td class="green up">2</td>
-										<td>Intetics</td>
-										<td>9</td>
-										<td>6</td>
-										<td>3</td>
-										<td>0</td>
-										<td>24-5</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td class="green">3</td>
-										<td>Intetics</td>
-										<td>9</td>
-										<td>6</td>
-										<td>3</td>
-										<td>0</td>
-										<td>24-5</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td class="green">4</td>
-										<td>Intetics</td>
-										<td>9</td>
-										<td>6</td>
-										<td>3</td>
-										<td>0</td>
-										<td>24-5</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>5</td>
-										<td>Intetics</td>
-										<td>9</td>
-										<td>6</td>
-										<td>3</td>
-										<td>0</td>
-										<td>24-5</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>6</td>
-										<td>Intetics</td>
-										<td>9</td>
-										<td>6</td>
-										<td>3</td>
-										<td>0</td>
-										<td>24-5</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>7</td>
-										<td>Intetics</td>
-										<td>9</td>
-										<td>6</td>
-										<td>3</td>
-										<td>0</td>
-										<td>24-5</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td class="yellow">8</td>
-										<td>Intetics</td>
-										<td>9</td>
-										<td>6</td>
-										<td>3</td>
-										<td>0</td>
-										<td>24-5</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td class="yellow">9</td>
-										<td>Intetics</td>
-										<td>9</td>
-										<td>6</td>
-										<td>3</td>
-										<td>0</td>
-										<td>24-5</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td class="red">10</td>
-										<td>Intetics</td>
-										<td>9</td>
-										<td>6</td>
-										<td>3</td>
-										<td>0</td>
-										<td>24-5</td>
-										<td>21</td>
-									</tr>
-								</tbody>
-							</table>
+				<div class="two-columns">
+					<div id="content">
+						<div class="table-row" id="senior">
+							<div class="table-holder statistics">
+								<div class="content-box widget">
+									<h3>Турнирная таблица</h3>
+									<table>
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>Команда</th>
+												<th>И</th>
+												<th>В</th>
+												<th>Н</th>
+												<th>П</th>
+												<th>М</th>
+												<th>О</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="green down">1</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="green up">2</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="green">3</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="green">4</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>6</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="yellow">8</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="yellow">9</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="red">10</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="link"><a href="#">смотреть результаты по турам</a></span>
+							</div>
+							<div class="table-holder statistics">
+								<div class="content-box widget">
+									<h3>Лучшие Бомбардиры</h3>
+									<table>
+										<thead>
+											<tr>
+												<th>Игрок</th>
+												<th>#</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="link"><a href="#">смотреть бомбардиров по турам</a></span>
+							</div>
+							<div class="table-holder statistics">
+								<div class="content-box widget">
+									<h3>КаРточки</h3>
+									<table>
+										<thead>
+											<tr>
+												<th>Игрок</th>
+												<th>ЖК</th>
+												<th>КК</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="link"><a href="#">заказать лазанью</a></span>
+							</div>
 						</div>
-						<span class="link"><a href="#">смотреть результаты по турам</a></span>
-					</div>
-					<div class="table-holder statistics">
-						<div class="content-box widget">
-							<h3>Лучшие Бомбардиры</h3>
-							<table>
-								<thead>
-									<tr>
-										<th>Игрок</th>
-										<th>#</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-									</tr>
-								</tbody>
-							</table>
+						<div class="table-row" id="middle" style="display: none;">
+							<div class="table-holder statistics">
+								<div class="content-box widget">
+									<h3>Турнирная таблица</h3>
+									<table>
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>Команда</th>
+												<th>И</th>
+												<th>В</th>
+												<th>Н</th>
+												<th>П</th>
+												<th>М</th>
+												<th>О</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="green down">1</td>
+												<td>W3</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="green up">2</td>
+												<td>W3</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="green">3</td>
+												<td>W3</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="green">4</td>
+												<td>W3</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>W3</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>6</td>
+												<td>W3</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>W3</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="yellow">8</td>
+												<td>W3</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="yellow">9</td>
+												<td>W3</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="red">10</td>
+												<td>W3</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="link"><a href="#">смотреть результаты по турам</a></span>
+							</div>
+							<div class="table-holder statistics">
+								<div class="content-box widget">
+									<h3>Лучшие Бомбардиры</h3>
+									<table>
+										<thead>
+											<tr>
+												<th>Игрок</th>
+												<th>#</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Mihalych <span class="team"> - HZ</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="link"><a href="#">смотреть бомбардиров по турам</a></span>
+							</div>
+							<div class="table-holder statistics">
+								<div class="content-box widget">
+									<h3>КаРточки</h3>
+									<table>
+										<thead>
+											<tr>
+												<th>Игрок</th>
+												<th>ЖК</th>
+												<th>КК</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="link"><a href="#">заказать лазанью</a></span>
+							</div>
 						</div>
-						<span class="link"><a href="#">смотреть бомбардиров по турам</a></span>
-					</div>
-					<div class="table-holder statistics">
-						<div class="content-box widget">
-							<h3>КаРточки</h3>
-							<table>
-								<thead>
-									<tr>
-										<th>Игрок</th>
-										<th>ЖК</th>
-										<th>КК</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-										<td>21</td>
-									</tr>
-									<tr>
-										<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
-										<td>21</td>
-										<td>21</td>
-									</tr>
-								</tbody>
-							</table>
+						<div class="table-row" id="junior" style="display: none;">
+							<div class="table-holder statistics">
+								<div class="content-box widget">
+									<h3>Турнирная таблица</h3>
+									<table>
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>Команда</th>
+												<th>И</th>
+												<th>В</th>
+												<th>Н</th>
+												<th>П</th>
+												<th>М</th>
+												<th>О</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="green down">1</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="green up">2</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="green">3</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="green">4</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>6</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td>Intetics</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="yellow">8</td>
+												<td>Nix Solutions</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="yellow">9</td>
+												<td>Nix Solutions</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td class="red">10</td>
+												<td>Nix Solutions</td>
+												<td>9</td>
+												<td>6</td>
+												<td>3</td>
+												<td>0</td>
+												<td>24-5</td>
+												<td>21</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="link"><a href="#">смотреть результаты по турам</a></span>
+							</div>
+							<div class="table-holder statistics">
+								<div class="content-box widget">
+									<h3>Лучшие Бомбардиры</h3>
+									<table>
+										<thead>
+											<tr>
+												<th>Игрок</th>
+												<th>#</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Tihonov Igor <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="link"><a href="#">смотреть бомбардиров по турам</a></span>
+							</div>
+							<div class="table-holder statistics">
+								<div class="content-box widget">
+									<h3>КаРточки</h3>
+									<table>
+										<thead>
+											<tr>
+												<th>Игрок</th>
+												<th>ЖК</th>
+												<th>КК</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Green Peace <span class="team"> - Promodo</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+											<tr>
+												<td>Вдоварейзе Сергей <span class="team"> - Nix Solutions</span></td>
+												<td>21</td>
+												<td>21</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<span class="link"><a href="#">заказать лазанью</a></span>
+							</div>
 						</div>
-						<span class="link"><a href="#">заказать лазанью</a></span>
 					</div>
-					<div class="table-holder">
+					<aside id="sidebar">
 						<div class="content-box widget">
 							<h3>Последние матчи</h3>
 							<ul class="tabset" data-directive="tabs">
@@ -457,7 +955,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</aside>
 				</div>
 			</div>
 		</main>
