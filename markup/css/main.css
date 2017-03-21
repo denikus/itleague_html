@@ -532,6 +532,10 @@ input[type="submit"],
 	content: "\e900";
 }
 
+.icon-ball:before {
+	content: "\e90a";
+}
+
 .icon-goalscorer:before {
 	content: "\e908";
 }
