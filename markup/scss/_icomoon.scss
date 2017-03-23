@@ -24,6 +24,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-up:before {
+  content: "\ea32";
+}
+.icon-arrow-down:before {
+  content: "\ea36";
+}
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-vk:before {
+  content: "\f189";
+}
 .icon-search:before {
   content: "\e900";
 }
@@ -56,11 +71,5 @@
 }
 .icon-user:before {
   content: "\e907";
-}
-.icon-arrow-up:before {
-  content: "\ea32";
-}
-.icon-arrow-down:before {
-  content: "\ea36";
 }
 
